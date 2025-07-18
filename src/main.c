@@ -17,6 +17,38 @@
 #include <stdio.h>
 
 int main(int argc, char **argv) {
-	
+    int c = 0;
+    
+    printf("[ESC] ");
+    fflush(stdout);
+	while (c!=27) {
+        c = get_keychar();
+        switch (c) {
+            case -1:
+                printf("End"); break;
+            case -2:
+                printf("Down"); break;
+            case -3:
+                printf("Next"); break;
+            case -4:
+                printf("Left"); break;
+            case -5:
+                printf("Wait"); break;
+            case -6:
+                printf("Right"); break;
+            case -7:
+                printf("Home"); break;
+            case -8:
+                printf("Up"); break;
+            case -9:
+                printf("Previous"); break;
+            case 27:
+            case 13:
+                printf("\n"); break;
+            default:
+                printf("%c", c); break;
+        }
+        fflush(stdout);
+    }
 	return 0;
 }
