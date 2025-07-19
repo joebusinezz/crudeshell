@@ -1,4 +1,4 @@
-# crudeinterpreter
+# crudeshell
 
 This intends to be a crude interpreter shell writen in C. (WIP)
 
